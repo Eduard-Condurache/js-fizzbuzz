@@ -1,19 +1,30 @@
-// FINCHE (I) E' MINORE O UGUALE A 100 AGGIUNGE +1 (i++)
+const myUl = document.querySelector('ul');
+
 for (let i = 1; i <= 100; i++) {
-// SE (I) E' UN MULTIPLO DI 3 (E) SE I E' UN MULTIPLO DI 5 STAMPA FIZZBUZZ.
+    let testo;
+
     if (i % 3 == 0 && i % 5 == 0) {
         console.log('FizzBuzz');
+        testo = 'FizzBuzz'
     } 
-// ALTRIMENTI SE (I) E' UN MULTIPLO DI 3 STAMPA FIZZ.
+
     else if (i % 3 == 0) {
         console.log('fizz');
+        testo = "fizz"
     }
-// ALTRIMENTI SE (I) E' UN MULTIPLO DI 5 STAMPA BUZZ.
+
     else if (i % 5 == 0) {
         console.log('buzz');
+        testo = "buzz"
     }
-// ALTRIMENTI STAMPA IN CONSOLE (I).
+
     else {
         console.log(i);
+        testo = i;
     }
+
+    const newLi = document.createElement('li');
+    newLi.innerHTML = testo;
+    myUl.append(newLi);
+
 }
