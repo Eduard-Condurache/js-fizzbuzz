@@ -30,28 +30,7 @@ for (let i = 1; i <= 100; i++) {
     const box = document.createElement('div');
     box.innerHTML = testo;
 
-    box.style.width = '100px';
-    box.style.height = '100px';
-    box.style.margin = '10px';
-    box.style.display = 'flex';
-    box.style.alignItems = 'center';
-    box.style.justifyContent = 'center';
-
-    if (className === 'fizzbuzz') {
-        box.style.backgroundColor = '#F0466F';
-    }
-
-    else if (className === 'fizz') {
-        box.style.backgroundColor = '#0CD6A1';
-    }
-
-    else if (className === 'buzz') {
-        box.style.backgroundColor = '#FFD166';
-    }
-
-    else {
-        box.style.backgroundColor = '#1389B2';
-    }
+    box.className = 'box ' + className;
 
     boxContainer.append(box);
 
